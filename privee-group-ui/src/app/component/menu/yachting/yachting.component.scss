@@ -1,0 +1,37 @@
+img{
+    position: relative;
+    transform: skewX(22deg) translate3d(-31%,0,0) scale(1);
+    filter: brightness(0.4);
+
+}
+.image-container{
+    position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+    position: absolute;
+    top: 47%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+    font-weight: 400;
+    ul{
+        display: none;
+        list-style: none;
+        li{
+            padding: 10px;
+        }
+    }
+  }
+  .image-container:hover{
+    img{
+
+        transform: skewX(22deg) translate3d(-31%,0,0) scale(2);
+        filter: brightness(0.4);
+    }
+    ul{
+        display: block;
+    }
+  }
+
