@@ -1,12 +1,12 @@
-<div class="image-container">
+<div class="image-container" [ngClass]="isDining?'active':''">
 <img src="../../../../assets/img/dinning.png" alt="">
     <div class="centered">
         <nav>
             <h4>DINING</h4>
             <div>
-                <ul>
-                    <li><a href="https://privee.gr/rest/">International Cuisine</a></li>
-                    <li><a href="https://oshu.gr/">Japanese Cuisine</a></li>
+                <ul *ngFor="let dining of diningObj">
+                    <li> 
+                        <a href={{dining.url}}><fa-icon [icon]="chevronRight"></fa-icon>{{dining.fieldName}}</a></li>
                 </ul>
             </div>
         </nav>

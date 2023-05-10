@@ -17,5 +17,8 @@ export class MenuComponent {
     })
     
   }
+  hoveredContent(value:string):void{
+    this.triggeredValue = value
+  }
 
 }

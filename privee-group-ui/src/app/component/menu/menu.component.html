@@ -1,15 +1,15 @@
-<div class="menu-body">
-    <div class="left-img">
-        <app-events></app-events>
+<div class="menu-body" >
+    <div class="left-img" (mouseenter)="hoveredContent('events')">
+        <app-events [triggeredValue]="triggeredValue"></app-events>
     </div>
-    <div class="center-img">
-        <app-dining></app-dining>
+    <div class="center-img" (mouseenter)="hoveredContent('dining')">
+        <app-dining [triggeredValue]="triggeredValue"></app-dining>
         <!-- <app-dining></app-dining> -->
     </div>
-    <div class="center-img">
-        <app-yachting></app-yachting>
+    <div class="center-img" (mouseenter)="hoveredContent('yachting')">
+        <app-yachting [triggeredValue]="triggeredValue"></app-yachting>
     </div>
-    <div class="right-img">
-        <app-hospitality></app-hospitality>
+    <div class="right-img" (mouseenter)="hoveredContent('hospitality')">
+        <app-hospitality [triggeredValue]="triggeredValue"></app-hospitality>
     </div>
 </div>

@@ -11,6 +11,8 @@ import { EventsComponent } from './component/menu/events/events.component';
 import { DiningComponent } from './component/menu/dining/dining.component';
 import { YachtingComponent } from './component/menu/yachting/yachting.component';
 import { HospitalityComponent } from './component/menu/hospitality/hospitality.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { HospitalityComponent } from './component/menu/hospitality/hospitality.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

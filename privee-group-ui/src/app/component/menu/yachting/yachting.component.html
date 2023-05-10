@@ -1,14 +1,11 @@
-<div class="image-container">
+<div class="image-container" [ngClass]="isYachting?'active':''">
     <img src="../../../assets/img/yac.jpg" alt="">
     <div class="centered">
         <nav>
             <h4>YACHTING</h4>
             <div>
-                <ul>
-                    <li><a href="https://megayachtevents.gr/charter/">Charter</a></li>
-                    <li><a href="https://megayachtevents.gr/weddings/">Weddings</a></li>
-                    <li><a href="https://megayachtevents.gr/bachelor-parties/">Bachelor Parties</a></li>
-                    <li><a href="https://megayachtevents.gr/vip-parties/">VIP Parties</a></li>
+                <ul *ngFor="let yachting of yachtingObj">
+                    <li><a href={{yachting.url}}><fa-icon [icon]="chevronRight"></fa-icon>{{yachting.fieldName}}</a></li>
                 </ul>
             </div>
         </nav>

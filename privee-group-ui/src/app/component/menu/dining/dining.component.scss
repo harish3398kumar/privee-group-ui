@@ -1,8 +1,7 @@
 img{
     position: relative;
     transform: skewX(22deg) translate3d(-31%,0,0) scale(1);
-
-
+    transition: transform 0.5s ease-in-out;
 }
 .image-container{
     position: relative;
@@ -14,13 +13,19 @@ img{
     top: 40%;
     left: 10%;
     transform: translate(-50%, -50%);
-    font-size: large;
+
+    font-size: medium;
     font-weight: 400;
     ul{
         display: none;
         list-style: none;
         li{
             padding: 10px;
+            transition: font-size 0.3s ease-in-out;
+            fa-icon{
+                display: none;
+                padding-right: 5px;
+            }
         }
     }
   }
@@ -30,6 +35,26 @@ img{
     }
     ul{
         display: block;
+        li:hover{
+            font-weight: 500;
+            font-size: large;
+            fa-icon{
+                display: block;
+            }
+        }
     }
   }
 
+.active{
+    img{
+        transform: skewX(22deg) translate3d(-31%,0,0) scale(2);
+    }
+    ul{
+        display: block;
+    }
+  }
+i{
+    position: absolute;
+    top:25px;
+    left: 15px;
+}
