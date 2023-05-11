@@ -38,3 +38,206 @@
 a {
     text-decoration: none !important;
 }
+::ng-deep{
+    .image-container {
+        position: relative;
+        text-align: center;
+        color: white;
+        *{
+            transition: all 0.25s ease;
+        }
+        img {
+            position: relative;
+            transform: skewX(22deg) translate3d(-31%, 0, 0) scale(1);
+            filter: brightness(0.6);
+            transition: 0.5s ease-in-out !important;
+        }
+    }
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        font-size: medium;
+        font-weight: 100;
+    
+        h4 {
+            font-weight: 100;
+            transform: skewX(22deg);
+            text-align: left;
+        }
+    
+        ul {
+            opacity: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+    
+            li {
+                //width: 300px;
+                transform: skewX(22deg);
+                font-size: 140%;
+                //padding: 10px;
+                a{
+                    height: 0;
+                    opacity: 0;
+                }
+    
+                fa-icon {
+                    width: 0;
+                    opacity: 0;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+
+    .image-container{
+        height: 100%;
+        &.active,
+        &:hover{
+            .centered{
+                ul{
+                    li{
+                        padding: 20px 0;
+                        a{
+                            height: 10px !important;
+                            opacity: 1 !important;
+                        }
+                    }
+                }
+            }
+        }
+        &.events{
+            img {
+                position: relative;
+                transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.2);
+                filter: brightness(0.6);
+                transition: 0.5s ease-in-out;
+            }
+            &.active,
+            &:hover{
+                img {
+                    transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.4);
+                    filter: brightness(0.5);
+                }
+            }
+        }
+        &.hospitality{
+            img {
+                position: relative;
+                transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.4);
+                filter: brightness(0.6);
+                transition: 0.5s ease-in-out;
+            }
+            &.active,
+            &:hover{
+                img {
+                    transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.6);
+                    filter: brightness(0.5);
+                }
+            }
+            .centered{
+                left: 16%;
+            }
+        }
+        &.dinning{
+            img {
+                transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.6);
+            }
+        }
+        &.yatching{
+            .centered{
+                left: 16%;
+            }
+        }
+    }
+
+    .image-container.active,
+    .image-container:hover {
+        img {
+    
+            transform: skewX(22deg) translate3d(-31%, 0, 0) scale(1.2);
+            filter: brightness(0.5);
+        }
+        
+        &.dinning{
+            img {
+                transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.8);
+            }
+        }
+    
+        ul {
+            opacity: 1;
+            
+            li:hover {
+                width: auto;
+                opacity: 1;
+                fa-icon {
+                    width: 20px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width: 760px) {
+    .menu-body{
+        grid-template-columns: 1fr;
+        height: auto;
+        .right-img,
+        .center-img,
+        .left-img{
+            & > *{
+                width: 100%;
+            }
+            transform: none;
+            ::ng-deep{
+                .image-container{
+                    min-height: 50vh;
+                    width: 100%;
+                    isolation: isolate;
+                    h4,li{
+                        transform: none;
+                    }
+                    > img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(1.4);
+                        z-index: -1;
+                    }
+                    &:hover{
+                        > img{
+                            transform: translate(-50%, -50%) scale(1.6);
+                            filter: brightness(-0.5);
+                        }
+                    }
+                    .centered{
+                        position: unset;
+                        transform: none;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        h4{
+                            text-align: center;
+                        }
+                        nav{
+                            > div{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                ul{
+                                    width: fit-content;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

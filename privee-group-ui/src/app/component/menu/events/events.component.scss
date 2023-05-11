@@ -1,76 +1,74 @@
-img {
-    position: relative;
-    transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.2);
-    filter: brightness(0.6);
-    transition: 0.5s ease-in-out;
+// img {
+//     position: relative;
+//     transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.2);
+//     filter: brightness(0.6);
+//     transition: 0.5s ease-in-out;
+// }
 
+// .image-container {
+//     position: relative;
+//     text-align: center;
+//     color: white;
+// }
 
-}
+// .centered {
+//     position: absolute;
+//     top: 56%;
+//     left: 34%;
+//     transform: translate(-50%, -50%);
+//     font-size: medium;
+//     font-weight: 100;
 
-.image-container {
-    position: relative;
-    text-align: center;
-    color: white;
-}
+//     h4 {
+//         font-weight: 100;
+//         transform: skewX(22deg);
+//     }
 
-.centered {
-    position: absolute;
-    top: 56%;
-    left: 34%;
-    transform: translate(-50%, -50%);
-    font-size: medium;
-    font-weight: 100;
+//     ul {
+//         transition: 0.5s;
+//         position: relative;
+//         left: 50px;
+//         width: 350px;
+//         display: none;
+//         list-style: none;
 
-    h4 {
-        font-weight: 100;
-        transform: skewX(22deg);
-    }
+//         li {
+//             transform: skewX(22deg);
+//             font-size: 140%;
+//             padding: 10px;
 
-    ul {
-        transition: 0.5s;
-        position: relative;
-        left: 50px;
-        width: 350px;
-        display: none;
-        list-style: none;
+//             fa-icon {
+//                 display: none;
+//                 padding-right: 5px;
+//             }
+//         }
+//     }
+// }
 
-        li {
-            transform: skewX(22deg);
-            font-size: 140%;
-            padding: 10px;
+// .image-container:hover {
+//     img {
+//         transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.4);
+//         filter: brightness(0.5);
+//     }
 
-            fa-icon {
-                display: none;
-                padding-right: 5px;
-            }
-        }
-    }
-}
+//     ul {
+//         display: block;
 
-.image-container:hover {
-    img {
-        transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.4);
-        filter: brightness(0.5);
-    }
+//         li:hover {
+//             fa-icon {
+//                 display: block;
+//             }
+//         }
+//     }
+// }
 
-    ul {
-        display: block;
+// .active {
+//     img {
+//         transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.4);
+//         filter: brightness(0.5);
+//     }
 
-        li:hover {
-            fa-icon {
-                display: block;
-            }
-        }
-    }
-}
-
-.active {
-    img {
-        transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.4);
-        filter: brightness(0.5);
-    }
-
-    ul {
-        display: block;
-    }
-}
+//     ul {
+//         display: block;
+//     }
+// }

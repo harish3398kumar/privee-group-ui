@@ -14,7 +14,8 @@
     top: 2em;
     right: 2em;
     text-align: right;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     text-transform: uppercase;
     cursor: pointer;
 
@@ -46,6 +47,42 @@
         }
 
     }
+    @media (max-width: 760px) {
+        // position: fixed;
+        position: absolute;
+        transition: all 0.25s ease;
+        opacity: 0;
+        pointer-events: none;
+        inset: 15px 12px;
+        background-color: rgba(0,0,0,0.7);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        min-height: 100vh;
+        z-index: 5;
+        &.active{
+            opacity: 1;
+            pointer-events: all;
+        }
+        li{
+            display: grid;
+            gap: 6px;
+            width: fit-content;
+            a{
+                justify-content: center;
+                img{
+                    width: auto;
+                    height: 3em;
+                }
+            }
+            span{
+                display: block;
+                color: #FFF;
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 .icon-menu {
@@ -55,10 +92,65 @@
             opacity: 1;
             color: white;
         }
-
+        
         img {
             font-size: 25px;
         }
     }
-
+    
+}
+.sidenav-toggler{
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 10;
+    background-color: transparent;
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    display: none;
+    animation: unspin 0.4s ease-in-out;
+    @media (max-width: 760px) {
+        display: block;
+    }
+    &::before,
+    &::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 1px solid #FFF;
+        height: 100%;
+    }
+    &::before{
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after{
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &.active{
+        animation: spin 0.4s ease-in-out;
+    }
+}
+.header-icon-wrap{
+    position: relative;
+    z-index: 11;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes unspin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
 }

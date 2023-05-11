@@ -1,6 +1,7 @@
 .footer {
     margin-top: 25px;
     border-top: 1px solid rgb(192, 192, 192);
+    position: relative;
 }
 
 div {
@@ -16,7 +17,7 @@ ul {
 }
 
 li {
-    float: left;
+    // float: left;
     display: block;
     text-align: center;
     padding: 16px;
@@ -33,7 +34,10 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     margin: 1em 0 0em;
-
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
     li {
         cursor: pointer;
     }
@@ -42,21 +46,24 @@ a {
 .footer-secondary-menu {
     margin: 0;
     text-shadow: 0 0 0px #000;
-
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-tertiary-menu {
     display: block;
     font-weight: bold;
     margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-legal-menu {
-    font-size: 85%;
-    display: inline;
-    position: relative;
-    left: 145px;
-    top: -2.9em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     margin: 0;
     text-shadow: 0 0 0px #000;
 }
@@ -68,13 +75,9 @@ a {
 }
 
 .footer-social-menu {
-    position: relative;
     display: flex;
-    right: 0;
-    bottom: 34.5em;
     font-size: 5px;
-    margin: 0.4em 0;
-    justify-content: end;
+    margin: 0.4em 0 0.4em auto;
 
     li {
         padding-left: 5px;
@@ -91,8 +94,7 @@ a {
 .copyrights {
     display: flex;
     font-size: 85%;
-    position: relative;
-    top: -0.25em;
     margin: 0;
     text-shadow: 0 0 0px #000;
+    padding-left: 16px;
 }
