@@ -6,20 +6,20 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./dining.component.scss']
 })
 export class DiningComponent {
-  @Input() triggeredValue!:string;
-  isDining:boolean =false
+  @Input() triggeredValue!: string;
+  isDining: boolean = false
   chevronRight = faChevronRight
   public diningObj = [
-    {url:'https://privee.gr/rest/', fieldName:'International Cuisine'},
-    {url:'https://oshu.gr/', fieldName:'Japanese Cuisine'}
+    { url: 'https://privee.gr/rest/', fieldName: 'International Cuisine' },
+    { url: 'https://oshu.gr/', fieldName: 'Japanese Cuisine' }
   ]
-  ngOnChanges(changes: SimpleChanges): void  {
+  ngOnChanges(changes: SimpleChanges): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    if(this.triggeredValue === 'dining'){
+    if (this.triggeredValue === 'dining') {
       this.isDining = true;
     }
-    else{
+    else {
       this.isDining = false;
     }
   }

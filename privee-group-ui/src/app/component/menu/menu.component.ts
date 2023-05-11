@@ -7,17 +7,17 @@ import { MenuService } from 'src/app/service/menu/menu.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  public triggeredValue:string = ''
-  constructor(private menuService$: MenuService){
+  public triggeredValue: string = ''
+  constructor(private menuService$: MenuService) {
 
   }
   ngOnInit(): void {
-    this.menuService$.cardToDisplay.subscribe((value:string)=>{
+    this.menuService$.cardToDisplay.subscribe((value: string) => {
       this.triggeredValue = value
     })
-    
+
   }
-  hoveredContent(value:string):void{
+  hoveredContent(value: string): void {
     this.triggeredValue = value
   }
 

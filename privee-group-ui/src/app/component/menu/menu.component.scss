@@ -1,4 +1,4 @@
-.menu-body{
+.menu-body {
     display: grid;
     grid-template-columns: 35% 25% 25% 35%;
     width: 100%;
@@ -6,34 +6,35 @@
     margin-top: 15px;
     overflow: hidden;
 }
-.left-img{
+
+.left-img {
     display: flex;
     position: relative;
     width: 100%;
     left: 0;
-    transform: skewX(-22deg) translate3d(-27%,0,0);
+    transform: skewX(-22deg) translate3d(-27%, 0, 0);
     overflow: hidden;
 }
 
-.center-img{
+.center-img {
     display: flex;
     position: relative;
-    width:100%;
+    width: 100%;
     left: 0;
-    transform: skewX(-22deg) translate3d(-38%,0,0) scale(1);
+    transform: skewX(-22deg) translate3d(-38%, 0, 0) scale(1);
     overflow: hidden;
 }
 
 
-.right-img{
+.right-img {
     display: flex;
     position: relative;
-    width:100%;
+    width: 100%;
     left: 0;
-    transform: skewX(-22deg) translate3d(-27%,0,0) scale(1);
+    transform: skewX(-22deg) translate3d(-27%, 0, 0) scale(1);
     overflow: hidden;
 }
 
-a{
+a {
     text-decoration: none !important;
 }

@@ -8,9 +8,9 @@ import { MenuService } from 'src/app/service/menu/menu.service';
 })
 export class FooterComponent {
 
-  constructor(private menuService$: MenuService){}
-  public triggeredButton(value:string):void{
-      this.menuService$.cardToDisplay.next(value)              
+  constructor(private menuService$: MenuService) { }
+  public triggeredButton(value: string): void {
+    this.menuService$.cardToDisplay.next(value)
   }
 
 }

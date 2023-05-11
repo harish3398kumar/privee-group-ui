@@ -1,60 +1,81 @@
-img{
+img {
     position: relative;
-    transform: skewX(22deg) translate3d(-31%,0,0) scale(1);
-    transition: transform 0.5s ease-in-out;
+    transform: skewX(22deg) translate3d(-31%, 0, 0) scale(1.6);
+    filter: brightness(0.6);
+    transition: 0.5s ease-in-out;
 }
-.image-container{
+
+.image-container {
     position: relative;
-  text-align: center;
-  color: white;
+    text-align: center;
+    color: white;
 }
+
 .centered {
     position: absolute;
-    top: 40%;
-    left: 10%;
+    top: 63%;
+    left: 33%;
     transform: translate(-50%, -50%);
 
     font-size: medium;
     font-weight: 400;
-    ul{
+
+    h4 {
+        font-weight: 100;
+        transform: skewX(22deg);
+    }
+
+    ul {
         display: none;
         list-style: none;
-        li{
+
+        li {
+            width: 300px;
+            transform: skewX(22deg);
+            font-size: 140%;
+            font-weight: 100;
             padding: 10px;
-            transition: font-size 0.3s ease-in-out;
-            fa-icon{
+
+            fa-icon {
                 display: none;
                 padding-right: 5px;
             }
         }
     }
-  }
-  .image-container:hover{
-    img{
-        transform: skewX(22deg) translate3d(-31%,0,0) scale(2);
+}
+
+.image-container:hover {
+    img {
+        transform: skewX(22deg) translate3d(-31%, 0, 0) scale(1.8);
+        filter: brightness(0.5);
     }
-    ul{
+
+    ul {
         display: block;
-        li:hover{
-            font-weight: 500;
-            font-size: large;
-            fa-icon{
+
+        li:hover {
+            font-weight: 100;
+
+            fa-icon {
                 display: block;
             }
         }
     }
-  }
+}
 
-.active{
-    img{
-        transform: skewX(22deg) translate3d(-31%,0,0) scale(2);
+.active {
+    img {
+        transform: skewX(22deg) translate3d(-31%, 0, 0) scale(1.8);
+        filter: brightness(0.5)
     }
-    ul{
+
+    ul {
         display: block;
     }
-  }
-i{
+}
+
+i {
     position: absolute;
-    top:25px;
+    top: 25px;
     left: 15px;
 }
