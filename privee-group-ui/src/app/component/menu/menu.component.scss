@@ -44,7 +44,7 @@ a {
         text-align: center;
         color: white;
         *{
-            transition: all 0.25s ease;
+            transition: all 0.5s ease;
         }
         img {
             position: relative;
@@ -92,7 +92,11 @@ a {
             }
         }
     }
-
+    .events, .dinning, .yatching{
+        nav{
+            width: 300px;
+        }
+    }
     .image-container{
         height: 100%;
         &.active,

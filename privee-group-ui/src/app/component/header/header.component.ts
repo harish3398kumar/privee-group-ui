@@ -8,9 +8,9 @@ import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent {
  public dotCircle = faDotCircle; 
-active = false
+ public isActive = false
 
- fun(){
-this.active = !this.active;
+ public topNavToggle():void{
+this.isActive = !this.isActive;
  }
 }

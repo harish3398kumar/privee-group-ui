@@ -1,15 +1,15 @@
 <div class="menu-body">
-    <div class="left-img" (mouseenter)="hoveredContent('events')">
+    <div #imageCard class="left-img" (mouseenter)="hoveredContent('events')">
         <app-events [triggeredValue]="triggeredValue"></app-events>
     </div>
-    <div class="center-img" (mouseenter)="hoveredContent('dining')">
+    <div #imageCard class="center-img" (mouseenter)="hoveredContent('dining')">
         <app-dining [triggeredValue]="triggeredValue"></app-dining>
         <!-- <app-dining></app-dining> -->
     </div>
-    <div class="center-img" (mouseenter)="hoveredContent('yachting')">
+    <div #imageCard class="center-img" (mouseenter)="hoveredContent('yachting')">
         <app-yachting [triggeredValue]="triggeredValue"></app-yachting>
     </div>
-    <div class="right-img" (mouseenter)="hoveredContent('hospitality')">
+    <div #imageCard class="right-img" (mouseenter)="hoveredContent('hospitality')">
         <app-hospitality [triggeredValue]="triggeredValue"></app-hospitality>
     </div>
 </div>

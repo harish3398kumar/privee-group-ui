@@ -1,14 +1,14 @@
 <div class="col-6 header-icon-wrap">
-    <img class="head-icon" routerLink="/hello" routerLinkActive="true" src="../../../assets/img/Privee_Group_logo.png"
-        alt="">
+    <a href="#" aria-details=""><img class="head-icon" src="../../../assets/img/Privee_Group_logo.png" alt=""></a>
+    
 </div>
 <div class="col-6">
-    <ul [ngClass]=" active ? 'icon-menu active' : 'icon-menu'">
-        <li><a href=""><img src="../../../assets/img/icon_geo.svg" alt=""></a> <span>RESTAURANTS</span></li>
-        <li><a href=""><img src="../../../assets/img/icon_reservations.svg" alt=""></a><span>RESERVATIONS</span> </li>
-        <li><a href=""><img src="../../../assets/img/icon_events.svg" alt=""></a><span>EVENT INQUIRY</span></li>
-        <li><a href=""><img src="../../../assets/img/icon_mailinglist.svg" alt=""></a><span>MAILING LIST</span></li>
-        <li><a href=""><img src="../../../assets/img/icon_share.svg" alt=""></a><span>SOCIAL</span></li>
+    <ul [ngClass]=" isActive ? 'icon-menu active' : 'icon-menu'">
+        <li><a href="#"><img src="../../../assets/img/icon_geo.svg" alt=""></a> <span>RESTAURANTS</span></li>
+        <li><a href="#"><img src="../../../assets/img/icon_reservations.svg" alt=""></a><span>RESERVATIONS</span> </li>
+        <li><a href="#"><img src="../../../assets/img/icon_events.svg" alt=""></a><span>EVENT INQUIRY</span></li>
+        <li><a href="#"><img src="../../../assets/img/icon_mailinglist.svg" alt=""></a><span>MAILING LIST</span></li>
+        <li><a href="#"><img src="../../../assets/img/icon_share.svg" alt=""></a><span>SOCIAL</span></li>
     </ul>
-    <button [ngClass]=" active ? 'sidenav-toggler active' : 'sidenav-toggler'" (click)="fun()"></button>
+    <button [ngClass]=" isActive ? 'sidenav-toggler active' : 'sidenav-toggler'" (click)="topNavToggle()"></button>
 </div>
