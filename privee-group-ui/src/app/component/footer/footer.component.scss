@@ -1,7 +1,9 @@
 .footer {
     margin-top: 25px;
+    margin-bottom: 15px;
     border-top: 1px solid rgb(192, 192, 192);
     position: relative;
+    line-height: 0;
 }
 
 div {
@@ -31,19 +33,27 @@ a {
 }
 
 .footer-primary-menu {
+    position: relative;
+    left: -15px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 1em 0 0em;
+    margin: 0em -25px 1em 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    
+
+    ul {
+        padding-right: 2em;
+    }
+
     li {
         cursor: pointer;
     }
 }
 
 .footer-secondary-menu {
+    position: relative;
+    left: -15px;
     margin: 0;
     text-shadow: 0 0 0px #000;
     display: flex;
@@ -52,6 +62,8 @@ a {
 }
 
 .footer-tertiary-menu {
+    position: relative;
+    left: -15px;
     display: block;
     font-weight: bold;
     margin: 0;
@@ -61,6 +73,8 @@ a {
 }
 
 .footer-legal-menu {
+    position: relative;
+    left: -15px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -75,6 +89,9 @@ a {
 }
 
 .footer-social-menu {
+    position: relative;
+    right: 0;
+    padding-left: 10px;
     display: flex;
     font-size: 5px;
     margin: 0.4em 0 0.4em auto;

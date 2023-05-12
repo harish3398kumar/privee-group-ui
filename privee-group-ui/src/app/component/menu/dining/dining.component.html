@@ -4,8 +4,8 @@
         <nav>
             <h4>DINING</h4>
             <div>
-                <ul *ngFor="let dining of diningObj">
-                    <li>
+                <ul>
+                    <li *ngFor="let dining of diningObj">
                         <a href={{dining.url}}><fa-icon [icon]="chevronRight"></fa-icon>{{dining.fieldName}}</a>
                     </li>
                 </ul>

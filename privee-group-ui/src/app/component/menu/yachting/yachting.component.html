@@ -4,8 +4,9 @@
         <nav>
             <h4>YACHTING</h4>
             <div>
-                <ul *ngFor="let yachting of yachtingObj">
-                    <li><a href={{yachting.url}}><fa-icon [icon]="chevronRight"></fa-icon>{{yachting.fieldName}}</a>
+                <ul>
+                    <li *ngFor="let yachting of yachtingObj"><a href={{yachting.url}}><fa-icon
+                                [icon]="chevronRight"></fa-icon>{{yachting.fieldName}}</a>
                     </li>
                 </ul>
             </div>

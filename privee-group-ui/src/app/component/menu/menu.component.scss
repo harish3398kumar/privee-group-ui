@@ -38,14 +38,17 @@
 a {
     text-decoration: none !important;
 }
-::ng-deep{
+
+::ng-deep {
     .image-container {
         position: relative;
         text-align: center;
         color: white;
-        *{
+
+        * {
             transition: all 0.5s ease;
         }
+
         img {
             position: relative;
             transform: skewX(22deg) translate3d(-31%, 0, 0) scale(1);
@@ -53,7 +56,7 @@ a {
             transition: 0.5s ease-in-out !important;
         }
     }
-    
+
     .centered {
         position: absolute;
         top: 50%;
@@ -61,29 +64,30 @@ a {
         transform: translate(-50%, -50%);
         font-size: medium;
         font-weight: 100;
-    
+
         h4 {
             font-weight: 100;
             transform: skewX(22deg);
             text-align: left;
         }
-    
+
         ul {
             opacity: 0;
             margin: 0;
             padding: 0;
             list-style: none;
-    
+
             li {
                 //width: 300px;
                 transform: skewX(22deg);
                 font-size: 140%;
+
                 //padding: 10px;
-                a{
+                a {
                     height: 0;
                     opacity: 0;
                 }
-    
+
                 fa-icon {
                     width: 0;
                     opacity: 0;
@@ -92,67 +96,82 @@ a {
             }
         }
     }
-    .events, .dinning, .yatching{
-        nav{
+
+    .events,
+    .dinning,
+    .yatching {
+        nav {
             width: 300px;
         }
     }
-    .image-container{
+
+    .image-container {
         height: 100%;
+
         &.active,
-        &:hover{
-            .centered{
-                ul{
-                    li{
-                        padding: 20px 0;
-                        a{
-                            height: 10px !important;
+        &:hover {
+            .centered {
+                ul {
+                    li {
+                        padding: 10px 0;
+
+                        a {
+                            // height: 30px !important;
+                            height: auto !important;
                             opacity: 1 !important;
+                            line-height: auto;
                         }
                     }
                 }
             }
         }
-        &.events{
+
+        &.events {
             img {
                 position: relative;
                 transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.2);
                 filter: brightness(0.6);
                 transition: 0.5s ease-in-out;
             }
+
             &.active,
-            &:hover{
+            &:hover {
                 img {
                     transform: skewX(22deg) translate3d(14%, 0, 0) scale(1.4);
                     filter: brightness(0.5);
                 }
             }
         }
-        &.hospitality{
+
+        &.hospitality {
             img {
                 position: relative;
                 transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.4);
                 filter: brightness(0.6);
                 transition: 0.5s ease-in-out;
             }
+
             &.active,
-            &:hover{
+            &:hover {
                 img {
                     transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.6);
                     filter: brightness(0.5);
                 }
             }
-            .centered{
+
+            .centered {
                 left: 16%;
             }
         }
-        &.dinning{
+
+        &.dinning {
             img {
                 transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.6);
             }
         }
-        &.yatching{
-            .centered{
+
+        &.yatching {
+            .centered {
                 left: 16%;
             }
         }
@@ -161,23 +180,24 @@ a {
     .image-container.active,
     .image-container:hover {
         img {
-    
+
             transform: skewX(22deg) translate3d(-31%, 0, 0) scale(1.2);
             filter: brightness(0.5);
         }
-        
-        &.dinning{
+
+        &.dinning {
             img {
                 transform: skewX(22deg) translate3d(-18%, 0, 0) scale(1.8);
             }
         }
-    
+
         ul {
             opacity: 1;
-            
+
             li:hover {
                 width: auto;
                 opacity: 1;
+
                 fa-icon {
                     width: 20px;
                     opacity: 1;
@@ -185,56 +205,110 @@ a {
             }
         }
     }
-    
+
 }
-@media (max-width: 760px) {
-    .menu-body{
+
+@media (max-width:1440px) {
+    ::ng-deep {
+        .events {
+            .centered {
+                left: 30%;
+            }
+
+            nav {
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width:1280px) {
+    ::ng-deep {
+
+        .events,
+        .dinning {
+            .centered {
+                left: 22%;
+
+                nav {
+                    width: 100px;
+
+                    a {
+                        display: block;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .menu-body {
         grid-template-columns: 1fr;
         height: auto;
+
         .right-img,
         .center-img,
-        .left-img{
-            & > *{
+        .left-img {
+            &>* {
                 width: 100%;
             }
+
             transform: none;
-            ::ng-deep{
-                .image-container{
+
+            ::ng-deep {
+                .image-container {
                     min-height: 50vh;
                     width: 100%;
                     isolation: isolate;
-                    h4,li{
+
+                    h4,
+                    li {
                         transform: none;
                     }
-                    > img{
+
+                    >img {
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%, -50%) scale(1.4);
+                        transform: translate(-50%, -50%) scale(1.8);
                         z-index: -1;
                     }
-                    &:hover{
-                        > img{
-                            transform: translate(-50%, -50%) scale(1.6);
+
+                    &:hover {
+                        >img {
+                            transform: translate(-50%, -50%) scale(2);
                             filter: brightness(-0.5);
                         }
                     }
-                    .centered{
+
+                    .centered {
                         position: unset;
                         transform: none;
                         height: 100%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        h4{
+
+                        h4 {
                             text-align: center;
                         }
-                        nav{
-                            > div{
+
+                        nav {
+                            width: 250px;
+
+                            a {
+                                display: block;
+                                text-align: center;
+                            }
+
+                            >div {
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
-                                ul{
+
+                                ul {
                                     width: fit-content;
                                 }
                             }

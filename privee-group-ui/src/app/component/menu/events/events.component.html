@@ -4,8 +4,9 @@
         <nav>
             <h4>EVENTS</h4>
             <div>
-                <ul *ngFor="let event of eventObj">
-                    <li><a href={{event.url}}><fa-icon [icon]="chevronRight"></fa-icon>{{event.fieldName}}</a></li>
+                <ul>
+                    <li *ngFor="let event of eventObj"><a href={{event.url}}><fa-icon
+                                [icon]="chevronRight"></fa-icon>{{event.fieldName}}</a></li>
                 </ul>
             </div>
         </nav>

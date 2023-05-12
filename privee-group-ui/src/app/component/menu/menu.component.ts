@@ -17,7 +17,7 @@ export class MenuComponent {
       this.triggeredValue = value
       this.imgCard.toArray().forEach((val:ElementRef) =>{
         var a:string = val.nativeElement.outerText
-        if (a.split('\n').includes(value.toUpperCase()) && window.innerWidth <= 760){
+        if (a.split('\n').includes(value.toUpperCase()) && window.innerWidth <= 991){
           val.nativeElement.scrollIntoView({behavior: 'smooth'});
         }
       })
