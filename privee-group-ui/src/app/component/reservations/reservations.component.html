@@ -1,0 +1,42 @@
+<div class="reservation-container">
+    <img src="../../../assets/img/dinning.png" alt="">
+    <div class="form-container" [formGroup]="restaurentFormGroup">
+        <div>
+            <label for="">Select a location</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName="restaurentLocation" (change)="setValueForRestaurant()">
+                <option *ngFor="let location of listOfLocations" [value]='location'>{{location | uppercase}}</option>
+              </select>
+              <span></span>
+        </div>
+        <div>
+            <label for="">Select a Restaurant</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName="restaurentName">
+                <option *ngFor="let restaurent of listOfRestaurentsDisplay" [value]='restaurent'>{{restaurent | uppercase}}</option>
+            </select>
+            <span></span>
+
+        </div>
+        <div class="date">
+            <label for="">Date</label>
+            <input type="date" class="form-select form-select-sm" formControlName="bookingDate">
+        </div>
+        <div>
+            <label for="">Time</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName="bookingTime">
+                    <option *ngFor="let time of listOfBookingTime" [value]='time'>{{time | uppercase}}</option>
+                  </select>
+              <span></span>
+        </div>
+        <div>
+            <label for="">Party</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName="partyCount">
+                <option [value]="partyCount" *ngFor="let partyCount of listOfPartyCount">{{partyCount}}</option>
+                
+            </select>
+            <span></span>
+        </div>
+        <div>
+            <button class="btn btn-secondary" (click)="bookTheSlot()">Submit</button>
+        </div>
+    </div>
+</div>
