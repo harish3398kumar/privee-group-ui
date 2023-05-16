@@ -16,6 +16,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { EventInquiryFormComponent } from './component/event-inquiry-form/event-inquiry-form.component';
 import { EventFormComponent } from './component/event-inquiry-form/event-form/event-form.component';
 import { PrivateFormComponent } from './component/event-inquiry-form/private-form/private-form.component';
+import { MailingListFormComponent } from './component/mailing-list-form/mailing-list-form.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { PrivateFormComponent } from './component/event-inquiry-form/private-for
     EventInquiryFormComponent,
     EventFormComponent,
     PrivateFormComponent,
+    MailingListFormComponent,
   
   ],
   imports: [

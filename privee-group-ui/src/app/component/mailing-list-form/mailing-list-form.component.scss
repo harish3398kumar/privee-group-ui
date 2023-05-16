@@ -1,0 +1,77 @@
+.mailing-list-container{
+    position: absolute;
+    width: 50%;
+    top: 125px;
+    left: 450px;
+    z-index: 999;
+    color: white;
+    .row{
+        .col-6{
+            position: absolute;
+            left: 200px;
+            .label{
+                margin: 25px 0;
+                color: #757575;
+                position: relative;
+                left:25px;
+            }
+            .form-container{
+                color:white;
+                div{
+                    display: flex;
+                    margin: 25px;
+                    label{
+                        width: 150px;
+                    }
+                    input, select{
+                        width: 90%;
+                        background: transparent;
+                        color: white;
+                        border: none;
+                        border-bottom: 1px solid white;
+                        outline: none;
+                        
+                        option{
+                            background-color: black;
+                            :hover{
+                                background-color: white;
+                                color: black;
+                            }
+                        }
+                    }
+                    .checkbox-list{
+                        input[type=checkbox]{
+                            margin: 25px 0 25px 25px;
+                        }
+                        span{
+                            padding: 25px 10px;
+                        }
+
+                    }
+                }
+                
+            }
+            .date{
+                .form-select{
+                    background-image: none;
+                    padding: 10px !important;
+                }
+            }
+            
+        }
+        textarea{
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        .submit-btn{
+            display:flex;
+            justify-content: center;
+            padding: 25px;
+            button{
+                width: 250px;
+    
+            }
+        }
+    }
+}
