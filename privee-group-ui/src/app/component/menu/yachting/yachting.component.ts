@@ -7,8 +7,6 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./yachting.component.scss']
 })
 export class YachtingComponent {
-  @Input() triggeredValue!: string;
-  isYachting: boolean = false;
   chevronRight = faChevronRight
   public yachtingObj = [
     { url: 'https://megayachtevents.gr/charter/', fieldName: 'Charter' },
@@ -16,14 +14,5 @@ export class YachtingComponent {
     { url: 'https://megayachtevents.gr/bachelor-parties/', fieldName: 'Bachelor Parties' },
     { url: 'https://megayachtevents.gr/vip-parties/', fieldName: 'VIP Parties' }
   ]
-  ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
-    if (this.triggeredValue === 'yachting') {
-      this.isYachting = true;
-    }
-    else {
-      this.isYachting = false
-    }
-  }
+  
 }

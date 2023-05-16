@@ -1,16 +1,10 @@
-<div class="image-container hospitality" [ngClass]="isHospitality ?'active':''">
-    <img src="../../../../assets/img/hospitality.jpg">
-    <div class="centered">
-        <nav>
-            <h4>HOSPITALITY</h4>
-            <div>
-                <ul>
-                    <li *ngFor="let hospitality of hospitalityObj"><a href={{hospitality.url}}><fa-icon
-                                [icon]="chevronRight"></fa-icon>{{hospitality.fieldName}}</a></li>
-                </ul>
-            </div>
-        </nav>
 
+<nav>
+    <h4>HOSPITALITY</h4>
+    <div>
+        <ul>
+            <li *ngFor="let hospitality of hospitalityObj"><a href={{hospitality.url}}><fa-icon
+                        [icon]="chevronRight"></fa-icon>{{hospitality.fieldName}}</a></li>
+        </ul>
     </div>
-
-</div>
+</nav>

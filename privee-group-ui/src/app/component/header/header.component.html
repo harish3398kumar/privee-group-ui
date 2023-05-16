@@ -4,11 +4,11 @@
 </div>
 <div class="col-6">
     <ul [ngClass]=" isActive ? 'icon-menu active' : 'icon-menu'">
-        <li><a ><img src="../../../assets/img/icon_geo.svg" alt=""></a> <span>RESTAURANTS</span></li>
-        <li><a routerLink="/reservations"><img src="../../../assets/img/icon_reservations.svg" alt=""></a><span>RESERVATIONS</span> </li>
-        <li><a href="#"><img src="../../../assets/img/icon_events.svg" alt=""></a><span>EVENT INQUIRY</span></li>
-        <li><a href="#"><img src="../../../assets/img/icon_mailinglist.svg" alt=""></a><span>MAILING LIST</span></li>
-        <li><a href="#"><img src="../../../assets/img/icon_share.svg" alt=""></a><span>SOCIAL</span></li>
+        <li (click)="buttonTriggerd('restaurants')"><a><img src="../../../assets/img/icon_geo.svg" alt=""></a> <span>RESTAURANTS</span></li>
+        <li (click)="buttonTriggerd('reservations')"><a><img src="../../../assets/img/icon_reservations.svg" alt=""></a><span>RESERVATIONS</span> </li>
+        <li (click)="buttonTriggerd('event inquiry')"><a href="#"><img src="../../../assets/img/icon_events.svg" alt=""></a><span>EVENT INQUIRY</span></li>
+        <li (click)="buttonTriggerd('mailing list')"><a href="#"><img src="../../../assets/img/icon_mailinglist.svg" alt=""></a><span>MAILING LIST</span></li>
+        <li (click)="buttonTriggerd('social')"><a href="#"><img src="../../../assets/img/icon_share.svg" alt=""></a><span>SOCIAL</span></li>
     </ul>
     <button [ngClass]=" isActive ? 'sidenav-toggler active' : 'sidenav-toggler'" (click)="topNavToggle()"></button>
 </div>

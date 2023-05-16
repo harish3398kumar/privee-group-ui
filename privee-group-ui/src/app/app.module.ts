@@ -13,6 +13,9 @@ import { HospitalityComponent } from './component/menu/hospitality/hospitality.c
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReservationsComponent } from './component/reservations/reservations.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { EventInquiryFormComponent } from './component/event-inquiry-form/event-inquiry-form.component';
+import { EventFormComponent } from './component/event-inquiry-form/event-form/event-form.component';
+import { PrivateFormComponent } from './component/event-inquiry-form/private-form/private-form.component';
 
 
 @NgModule({
@@ -26,6 +29,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     YachtingComponent,
     HospitalityComponent,
     ReservationsComponent,
+    EventInquiryFormComponent,
+    EventFormComponent,
+    PrivateFormComponent,
   
   ],
   imports: [

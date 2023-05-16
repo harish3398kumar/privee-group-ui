@@ -1,0 +1,16 @@
+<div class="event-inquery-container">
+    <div class="tab-btn">
+        <button (click)="tabToggleBtn('event')" [ngClass]="isTabBtnTriggerd?'active':''">CATERING EVENT VENUE</button>
+        <button (click)="tabToggleBtn('private')" [ngClass]="!isTabBtnTriggerd?'active':''">PESTAURANT PRIVATE DINING</button>
+    </div>
+    <div class="event-inquery-content">
+        <div *ngIf="isTabBtnTriggerd">
+            <app-event-form></app-event-form>
+        </div>
+        <div *ngIf="!isTabBtnTriggerd">
+            <app-private-form></app-private-form>
+        </div>
+    </div>
+</div>
+
+

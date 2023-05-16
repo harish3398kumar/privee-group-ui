@@ -1,17 +1,11 @@
-<div class="image-container yatching" [ngClass]="isYachting?'active':''">
-    <img src="../../../assets/img/yac.jpg" alt="">
-    <div class="centered">
-        <nav>
-            <h4>YACHTING</h4>
-            <div>
-                <ul>
-                    <li *ngFor="let yachting of yachtingObj"><a href={{yachting.url}}><fa-icon
-                                [icon]="chevronRight"></fa-icon>{{yachting.fieldName}}</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
 
+<nav>
+    <h4>YACHTING</h4>
+    <div>
+        <ul>
+            <li *ngFor="let yachting of yachtingObj"><a href={{yachting.url}}><fa-icon
+                        [icon]="chevronRight"></fa-icon>{{yachting.fieldName}}</a>
+            </li>
+        </ul>
     </div>
-
-</div>
+</nav>

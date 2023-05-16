@@ -10,7 +10,11 @@ export class FooterComponent {
 
   constructor(private menuService$: MenuService) { }
   public triggeredButton(value: string): void {
-    this.menuService$.cardToDisplay.next(value)
+    let obj = {
+      component: 'footer',
+      value: value
+    }
+    this.menuService$.cardToDisplay.next(obj)
   }
 
 }

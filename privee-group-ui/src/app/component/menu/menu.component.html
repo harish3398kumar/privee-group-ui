@@ -1,15 +1,46 @@
 <div class="menu-body">
     <div #imageCard class="left-img" (mouseenter)="hoveredContent('events')">
-        <app-events [triggeredValue]="triggeredValue"></app-events>
+        <div class="image-container events" [ngClass]="isEvent?'active':''">
+            <img src="../../../assets/img/event.jpg" alt="" [ngClass]="isHeaderIcon?'dark-bk':''">
+            <div class="centered">
+                <app-events [ngClass]="isHeaderIcon?'in-active':''"></app-events>
+            </div>
+        </div>
     </div>
     <div #imageCard class="center-img" (mouseenter)="hoveredContent('dining')">
-        <app-dining [triggeredValue]="triggeredValue"></app-dining>
-        <!-- <app-dining></app-dining> -->
+        <div class="image-container dinning" [ngClass]="isDining?'active':''">
+            <img src="../../../../assets/img/dinning.png" alt="" [ngClass]="isHeaderIcon?'dark-bk':''">
+            <div class="centered">
+                <app-dining [ngClass]="isHeaderIcon?'in-active':''"></app-dining>
+                
+            </div>
+            
+        </div>
     </div>
     <div #imageCard class="center-img" (mouseenter)="hoveredContent('yachting')">
-        <app-yachting [triggeredValue]="triggeredValue"></app-yachting>
+        <div class="image-container yatching" [ngClass]="isYachting?'active':''">
+            <img src="../../../assets/img/yac.jpg" alt="" [ngClass]="isHeaderIcon?'dark-bk':''">
+            <div class="centered">
+                <app-yachting [ngClass]="isHeaderIcon?'in-active':''"></app-yachting>
+                
+            </div>
+            
+        </div>
     </div>
     <div #imageCard class="right-img" (mouseenter)="hoveredContent('hospitality')">
-        <app-hospitality [triggeredValue]="triggeredValue"></app-hospitality>
+        <div class="image-container hospitality" [ngClass]="isHospitality ?'active':''">
+            <img src="../../../../assets/img/hospitality.jpg" [ngClass]="isHeaderIcon?'dark-bk':''">
+            <div class="centered">
+                
+                <app-hospitality [ngClass]="isHeaderIcon?'in-active':''"></app-hospitality>
+            </div>
+            
+        </div>
     </div>
+</div>
+<div *ngIf="isHeaderIcon && triggeredValue.headerValue === 'reservations'">
+    <app-reservations></app-reservations>
+</div>
+<div>
+    <app-event-inquiry-form *ngIf="isHeaderIcon && triggeredValue.headerValue === 'event inquiry'"></app-event-inquiry-form>
 </div>
